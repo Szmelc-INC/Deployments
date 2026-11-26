@@ -1,0 +1,403 @@
+{
+  "generated": "2026-11-26",
+  "sites": [
+    {
+      "archived": false,
+      "description": "A WebUI based game in PHP / HTML",
+      "has_pages": false,
+      "homepage": "https://dev.szmelc.com/realistic-update-simulator",
+      "name": "Realistic-Update-Simulator",
+      "owner": "sernik77",
+      "pushed": "2025-09-06",
+      "repo": "sernik77/Realistic-Update-Simulator",
+      "url": "https://dev.szmelc.com/realistic-update-simulator",
+      "http": 0,
+      "flags": [],
+      "deploy": {
+        "at": "",
+        "env": ""
+      },
+      "surface": "skin",
+      "archetype": "-",
+      "flavor": "-",
+      "notes": "Homepage host dev.szmelc.com does not answer. The game also lives at szmelc.com/realistic-update-simulator/: point the homepage there."
+    },
+    {
+      "archived": false,
+      "description": "Assertion Main Loop for LLM",
+      "has_pages": true,
+      "homepage": "https://szmelc-inc.github.io/Assertion-Driven-Architecture/",
+      "name": "Assertion-Driven-Architecture",
+      "owner": "Szmelc-INC",
+      "pushed": "2026-11-17",
+      "repo": "Szmelc-INC/Assertion-Driven-Architecture",
+      "url": "https://szmelc-inc.github.io/Assertion-Driven-Architecture/",
+      "http": 404,
+      "flags": [],
+      "deploy": {
+        "at": "",
+        "env": ""
+      },
+      "surface": "project",
+      "archetype": "landing",
+      "flavor": "landing · ❯ · ADA · none · accent",
+      "notes": "Pages enabled (workflow source) but no deploy workflow, so the URL is 404. Add templates/pages.yml or disable Pages."
+    },
+    {
+      "archived": false,
+      "description": "Szmelc WebUI doctrine: one core, small per-project flavors. Audit of every deployment, templates and automations.",
+      "has_pages": true,
+      "homepage": "https://szmelc-inc.github.io/Deployments/",
+      "name": "Deployments",
+      "owner": "Szmelc-INC",
+      "pushed": "2026-11-26",
+      "repo": "Szmelc-INC/Deployments",
+      "url": "https://szmelc-inc.github.io/Deployments/",
+      "http": 404,
+      "flags": [],
+      "deploy": {
+        "at": "",
+        "env": ""
+      },
+      "surface": "project",
+      "archetype": "catalog",
+      "flavor": "catalog · ❯ · .2 · cursor · accent",
+      "notes": "Dogfood: built from templates/starter.html. Must stay free of lint flags."
+    },
+    {
+      "archived": false,
+      "description": "Kombinat v2 - Meta-SkyNET's for a modern dev.",
+      "has_pages": true,
+      "homepage": "",
+      "name": "Kombinat",
+      "owner": "Szmelc-INC",
+      "pushed": "2026-11-26",
+      "repo": "Szmelc-INC/Kombinat",
+      "url": "https://szmelc-inc.github.io/Kombinat/",
+      "http": 404,
+      "flags": [],
+      "deploy": {
+        "at": "",
+        "env": ""
+      },
+      "surface": "panel",
+      "archetype": "panel",
+      "flavor": "panel · ■ · v2 · none · accent",
+      "notes": "Pages enabled (workflow source) but no deploy workflow, so the URL is 404. The app is a local panel: disable Pages or ship a landing page."
+    },
+    {
+      "archived": false,
+      "description": "STABLE & INDEPENDENT Fork of Hyprland. (PRE LUA)",
+      "has_pages": false,
+      "homepage": "https://szmelc.com/hyperland",
+      "name": "Hyperland",
+      "owner": "sernik77",
+      "pushed": "2026-11-16",
+      "repo": "sernik77/Hyperland",
+      "url": "https://szmelc.com/hyperland",
+      "http": 404,
+      "flags": [],
+      "deploy": {
+        "at": "",
+        "env": ""
+      },
+      "surface": "project",
+      "archetype": "landing",
+      "flavor": "landing · ❯ · land · none · accent",
+      "notes": "Homepage szmelc.com/hyperland returns 404. Point it at the wiki (szmelc-inc.github.io/hyperland-wiki/) or add the route."
+    },
+    {
+      "archived": false,
+      "description": "A tool for creating aesthetic 'Alert' cards to embed in your README.md",
+      "has_pages": false,
+      "homepage": "https://szmelc.com/svg",
+      "name": "SVG-Alert-Studio",
+      "owner": "Szmelc-INC",
+      "pushed": "2026-08-01",
+      "repo": "Szmelc-INC/SVG-Alert-Studio",
+      "url": "https://szmelc.com/svg",
+      "http": 404,
+      "flags": [],
+      "deploy": {
+        "at": "",
+        "env": ""
+      },
+      "surface": "project",
+      "archetype": "reader",
+      "flavor": "reader · ❯ · SVG · none · accent",
+      "notes": "Homepage szmelc.com/svg returns 404. GitHub-dark clone palette (#0d1117, #58a6ff, #d2a8ff): map to core tokens."
+    },
+    {
+      "archived": false,
+      "description": "Chimera web page",
+      "has_pages": true,
+      "homepage": "",
+      "name": "Chimera-INC.github.io",
+      "owner": "BlockGame-Stuff",
+      "pushed": "2023-05-14",
+      "repo": "BlockGame-Stuff/Chimera-INC.github.io",
+      "url": "https://blockgame-stuff.github.io/Chimera-INC.github.io/",
+      "http": 200,
+      "flags": [
+        "no-theme"
+      ],
+      "deploy": {
+        "at": "2023-05-14",
+        "env": "github-pages"
+      },
+      "surface": "legacy",
+      "archetype": "landing",
+      "flavor": "-",
+      "notes": "Old-era page. Leave as is or archive the repository."
+    },
+    {
+      "archived": false,
+      "description": "Entropy Linux Webpage",
+      "has_pages": true,
+      "homepage": "https://entropy-linux.github.io/",
+      "name": "Entropy-Linux.github.io",
+      "owner": "Entropy-Linux",
+      "pushed": "2025-09-18",
+      "repo": "Entropy-Linux/Entropy-Linux.github.io",
+      "url": "https://entropy-linux.github.io/",
+      "http": 200,
+      "flags": [
+        "no-theme"
+      ],
+      "deploy": {
+        "at": "2025-09-18",
+        "env": "github-pages"
+      },
+      "surface": "legacy",
+      "archetype": "landing",
+      "flavor": "landing · ❯ · OS · scanlines · accent",
+      "notes": "Relic look (#00ff00 on black, blackletter). Keep blackletter as the wordmark face only; terminal theme; links as cards."
+    },
+    {
+      "archived": false,
+      "description": "Zero-knowledge cryptography lab: public lessons and verified test vectors, age-encrypted challenge payloads, CLI/TUI and a browser-side decryption portal.",
+      "has_pages": true,
+      "homepage": "https://szmelc-inc.github.io/Password123/",
+      "name": "Password123",
+      "owner": "Szmelc-INC",
+      "pushed": "2026-11-26",
+      "repo": "Szmelc-INC/Password123",
+      "url": "https://szmelc-inc.github.io/Password123/",
+      "http": 200,
+      "flags": [
+        "round"
+      ],
+      "deploy": {
+        "at": "2026-11-26",
+        "env": "github-pages"
+      },
+      "surface": "project",
+      "archetype": "reader",
+      "flavor": "reader · § · 123 · none · accent",
+      "notes": "Radius 6px cards to 3px; tags to outline badges; headings to --head, not accent; keep sans body (reader flavor)."
+    },
+    {
+      "archived": false,
+      "description": "Szmelc AUR (SAUR): self-updating, signed pacman repository of Szmelc.INC software, stable [saur] + experimental [saur-ex] channels, built for free by GitHub Actions",
+      "has_pages": true,
+      "homepage": "https://szmelc-inc.github.io/SAUR",
+      "name": "SAUR",
+      "owner": "Szmelc-INC",
+      "pushed": "2026-11-25",
+      "repo": "Szmelc-INC/SAUR",
+      "url": "https://szmelc-inc.github.io/SAUR/",
+      "http": 200,
+      "flags": [
+        "round"
+      ],
+      "deploy": {
+        "at": "2026-11-26",
+        "env": "github-pages"
+      },
+      "surface": "project",
+      "archetype": "registry",
+      "flavor": "registry · $ · AUR · none · accent",
+      "notes": "Replace pill buttons and pill nav with a radius of 4px or less; move the \"signed\" aquamarine badge to the single highlight slot; keep the pixel logo as the wordmark face."
+    },
+    {
+      "archived": false,
+      "description": "Wiki for Hyperland, an independent fork of Hyprland 0.54 (not affiliated).",
+      "has_pages": true,
+      "homepage": "https://szmelc-inc.github.io/hyperland-wiki/",
+      "name": "hyperland-wiki",
+      "owner": "Szmelc-INC",
+      "pushed": "2026-11-17",
+      "repo": "Szmelc-INC/hyperland-wiki",
+      "url": "https://szmelc-inc.github.io/hyperland-wiki/",
+      "http": 200,
+      "flags": [
+        "round"
+      ],
+      "deploy": {
+        "at": "2026-11-17",
+        "env": "github-pages"
+      },
+      "surface": "project",
+      "archetype": "docs",
+      "flavor": "docs · # · land · none · accent",
+      "notes": "Hextra defaults: purple callouts, blue links, light default. Add templates/hextra-custom.css; set dark default."
+    },
+    {
+      "archived": false,
+      "description": "Global Szmelc conventions for humans and AI agents: one meta SKILL.md plus AGENTS.md, CLAUDE.md, GEMINI.md, Cursor/Copilot/Kiro rules, llms.txt and JSON index from a single source",
+      "has_pages": true,
+      "homepage": "https://szmelc-inc.github.io/CONVENTIONS.md/",
+      "name": "CONVENTIONS.md",
+      "owner": "Szmelc-INC",
+      "pushed": "2026-11-26",
+      "repo": "Szmelc-INC/CONVENTIONS.md",
+      "url": "https://szmelc-inc.github.io/CONVENTIONS.md/",
+      "http": 200,
+      "flags": [],
+      "deploy": {
+        "at": "2026-11-26",
+        "env": "github-pages"
+      },
+      "surface": "project",
+      "archetype": "catalog",
+      "flavor": "catalog · ❯ · .md · cursor · accent",
+      "notes": "Reference implementation. Keep in sync with templates/szmelc.css token names."
+    },
+    {
+      "archived": false,
+      "description": "Examining practical applications of the Llama-3.1-8B bot: stupidity compensated by volume in scenarios where verification is cheaper than generation.",
+      "has_pages": false,
+      "homepage": "https://chatjimmy.ai/",
+      "name": "Jimmy",
+      "owner": "Szmelc-INC",
+      "pushed": "2026-11-17",
+      "repo": "Szmelc-INC/Jimmy",
+      "url": "https://chatjimmy.ai/",
+      "http": 200,
+      "flags": [
+        "round"
+      ],
+      "deploy": {
+        "at": "",
+        "env": ""
+      },
+      "surface": "external",
+      "archetype": "-",
+      "flavor": "-",
+      "notes": "Homepage is a third-party service, not a Szmelc UI. Out of scope."
+    },
+    {
+      "repo": "",
+      "owner": "",
+      "name": "szmelc.com",
+      "has_pages": false,
+      "archived": false,
+      "homepage": "https://szmelc.com/",
+      "pushed": "",
+      "description": "Pulpit OS: Win95 desktop shell",
+      "url": "https://szmelc.com/",
+      "http": 200,
+      "flags": [
+        "framework",
+        "round",
+        "no-theme",
+        "purple"
+      ],
+      "deploy": {},
+      "surface": "skin",
+      "archetype": "-",
+      "flavor": "-",
+      "notes": "Period skin scope (RULES/SKINS.md). Exempt from the visual core."
+    },
+    {
+      "repo": "",
+      "owner": "",
+      "name": "szmelc.com/algorytmy",
+      "has_pages": false,
+      "archived": false,
+      "homepage": "https://szmelc.com/algorytmy/",
+      "pushed": "",
+      "description": "Vaporwave music player",
+      "url": "https://szmelc.com/algorytmy/",
+      "http": 200,
+      "flags": [
+        "framework",
+        "round",
+        "no-theme",
+        "purple"
+      ],
+      "deploy": {},
+      "surface": "skin",
+      "archetype": "-",
+      "flavor": "-",
+      "notes": "Vaporwave skin. Exempt."
+    },
+    {
+      "repo": "",
+      "owner": "",
+      "name": "szmelc.com/nawigacja",
+      "has_pages": false,
+      "archived": false,
+      "homepage": "https://szmelc.com/nawigacja/",
+      "pushed": "",
+      "description": "Route directory (neon cards)",
+      "url": "https://szmelc.com/nawigacja/",
+      "http": 200,
+      "flags": [
+        "framework",
+        "round",
+        "no-theme",
+        "purple"
+      ],
+      "deploy": {},
+      "surface": "skin",
+      "archetype": "-",
+      "flavor": "-",
+      "notes": "Neon skin. Exempt. Check the focus ring (a11y floor)."
+    },
+    {
+      "repo": "",
+      "owner": "",
+      "name": "szmelc.com/ssn",
+      "has_pages": false,
+      "archived": false,
+      "homepage": "https://szmelc.com/ssn/",
+      "pushed": "",
+      "description": "Cassette-futurism station network",
+      "url": "https://szmelc.com/ssn/",
+      "http": 200,
+      "flags": [
+        "round",
+        "no-theme",
+        "purple"
+      ],
+      "deploy": {},
+      "surface": "skin",
+      "archetype": "-",
+      "flavor": "-",
+      "notes": "Cassette-futurism skin. Exempt."
+    },
+    {
+      "repo": "",
+      "owner": "",
+      "name": "szmelc.com/telegazeta",
+      "has_pages": false,
+      "archived": false,
+      "homepage": "https://szmelc.com/telegazeta/",
+      "pushed": "",
+      "description": "Teletext emulator",
+      "url": "https://szmelc.com/telegazeta/",
+      "http": 200,
+      "flags": [
+        "round",
+        "no-theme",
+        "purple"
+      ],
+      "deploy": {},
+      "surface": "skin",
+      "archetype": "-",
+      "flavor": "-",
+      "notes": "Teletext skin. Exempt."
+    }
+  ]
+}

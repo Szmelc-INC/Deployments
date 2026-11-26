@@ -1,0 +1,20 @@
+# Hand-kept classification. Columns (tab-separated): repo-or-name, surface, archetype, flavor, migration notes.
+# surface: project | panel | skin | legacy.  flavor: archetype · prompt · suffix · effect · rule (RULES/FLAVORS.md).
+Szmelc-INC/CONVENTIONS.md	project	catalog	catalog · ❯ · .md · cursor · accent	Reference implementation. Keep in sync with templates/szmelc.css token names.
+Szmelc-INC/SAUR	project	registry	registry · $ · AUR · none · accent	Replace pill buttons and pill nav with a radius of 4px or less; move the "signed" aquamarine badge to the single highlight slot; keep the pixel logo as the wordmark face.
+Szmelc-INC/Password123	project	reader	reader · § · 123 · none · accent	Radius 6px cards to 3px; tags to outline badges; headings to --head, not accent; keep sans body (reader flavor).
+Szmelc-INC/hyperland-wiki	project	docs	docs · # · land · none · accent	Hextra defaults: purple callouts, blue links, light default. Add templates/hextra-custom.css; set dark default.
+Szmelc-INC/Assertion-Driven-Architecture	project	landing	landing · ❯ · ADA · none · accent	Pages enabled (workflow source) but no deploy workflow, so the URL is 404. Add templates/pages.yml or disable Pages.
+Szmelc-INC/Kombinat	panel	panel	panel · ■ · v2 · none · accent	Pages enabled (workflow source) but no deploy workflow, so the URL is 404. The app is a local panel: disable Pages or ship a landing page.
+Szmelc-INC/SVG-Alert-Studio	project	reader	reader · ❯ · SVG · none · accent	Homepage szmelc.com/svg returns 404. GitHub-dark clone palette (#0d1117, #58a6ff, #d2a8ff): map to core tokens.
+Entropy-Linux/Entropy-Linux.github.io	legacy	landing	landing · ❯ · OS · scanlines · accent	Relic look (#00ff00 on black, blackletter). Keep blackletter as the wordmark face only; terminal theme; links as cards.
+BlockGame-Stuff/Chimera-INC.github.io	legacy	landing	-	Old-era page. Leave as is or archive the repository.
+szmelc.com	skin	-	-	Period skin scope (RULES/SKINS.md). Exempt from the visual core.
+szmelc.com/nawigacja	skin	-	-	Neon skin. Exempt. Check the focus ring (a11y floor).
+szmelc.com/algorytmy	skin	-	-	Vaporwave skin. Exempt.
+szmelc.com/telegazeta	skin	-	-	Teletext skin. Exempt.
+szmelc.com/ssn	skin	-	-	Cassette-futurism skin. Exempt.
+Szmelc-INC/Jimmy	external	-	-	Homepage is a third-party service, not a Szmelc UI. Out of scope.
+sernik77/Hyperland	project	landing	landing · ❯ · land · none · accent	Homepage szmelc.com/hyperland returns 404. Point it at the wiki (szmelc-inc.github.io/hyperland-wiki/) or add the route.
+sernik77/Realistic-Update-Simulator	skin	-	-	Homepage host dev.szmelc.com does not answer. The game also lives at szmelc.com/realistic-update-simulator/: point the homepage there.
+Szmelc-INC/Deployments	project	catalog	catalog · ❯ · .2 · cursor · accent	Dogfood: built from templates/starter.html. Must stay free of lint flags.

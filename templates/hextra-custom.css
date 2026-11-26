@@ -1,0 +1,31 @@
+/* Hextra (Hugo) override: maps a docs site onto the Szmelc core (DOCTRINE.md, archetype "docs").
+   Copy to assets/css/custom.css. Hextra reads --primary-hue and --primary-saturation for its accent
+   (verified: hyperland-wiki sets them). --primary-lightness and the callout class selectors below are
+   (unverified) against every Hextra version: check one page of each callout type after the build.
+   The purple box on hyperland-wiki is the [!IMPORTANT] callout type, not the primary color.
+   Teal #105c5c is hue 180; links use the accessible step. Default the site to dark in config.toml:
+     [params.theme]
+     default = "dark"
+     displayToggle = true */
+:root{
+  --primary-hue:180deg;
+  --primary-saturation:70%;
+  --primary-lightness:34%;
+}
+.dark{
+  --primary-lightness:42%;
+}
+html.dark body,.dark .hextra-nav-container-blur,.dark .hextra-sidebar-container{background-color:#0b0b0b!important}
+html.dark body{color:#e3e3e3}
+.dark .hextra-nav-container,.dark .hextra-sidebar-container,.dark footer{border-color:#262626!important}
+/* square everything; no blur, no glass */
+:where(.hextra-card,.hextra-code-block,pre,code,input,button,.hextra-callout,[class*="rounded"]){border-radius:3px!important}
+.hextra-nav-container-blur{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+/* callouts: no purple; info/note teal, warning/important danger outline */
+.hextra-callout,[class*="callout"]{background:transparent!important;border-width:1px!important}
+:where([class*="callout"][class*="purple"],[class*="callout"][class*="violet"],[class*="callout"][class*="indigo"],[class*="callout"][class*="blue"]){border-color:#1f8a8a!important;color:inherit!important}
+:where([class*="callout"][class*="red"],[class*="callout"][class*="orange"],[class*="callout"][class*="amber"],[class*="callout"][class*="yellow"]){border-color:#b83a3a!important;color:inherit!important}
+/* type: mono labels and code; body stays the system sans (docs flavor) */
+code,pre,kbd,.hextra-toc,nav[aria-label] a{font-family:"JetBrains Mono",ui-monospace,"Cascadia Mono",Menlo,Consolas,monospace}
+a:not([class]){color:#1f8a8a;text-underline-offset:3px}
+.dark a:not([class]){color:#34a3a3}
