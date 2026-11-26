@@ -54,16 +54,19 @@ hue(){ awk -v h="$1" 'function x(c){return index("0123456789abcdef",tolower(c))-
   if(mx==r)H=60*(((g-b)/d)%6);else if(mx==g)H=60*((b-r)/d+2);else H=60*((r-g)/d+4);if(H<0)H+=360
   l=(mx+mn)/2;s=d/(1-(2*l-1<0?-(2*l-1):2*l-1));printf "%d %.2f\n",H,s}'; }
 
-# lint flags for one HTML file (plus the stylesheets it links on the same site)
+# lint flags for one page: $1 = the HTML plus linked CSS (structure checks),
+# $2 = CSS only (<style> blocks, style="" attributes, linked sheets) for colors and radius,
+# so hex values quoted in page text or data blocks never count
 lint_html(){
-  local f=$1; local -a hits=()
+  local f=$1 css=$2; local -a hits=()
   grep -qiE 'fonts\.googleapis|fonts\.gstatic|use\.typekit|fonts\.bunny' "$f" && hits+=(webfont)
   grep -qiE 'cdn\.tailwindcss|tailwind(\.min)?\.css|bootstrap(\.min)?\.css|bulma(\.min)?\.css' "$f" && hits+=(framework)
   grep -qiE 'googletagmanager|google-analytics|plausible\.io|umami|hotjar|clarity\.ms' "$f" && hits+=(tracker)
-  grep -qiE 'border-radius:\s*([5-9]|[1-9][0-9]+)px|border-radius:\s*[0-9.]+(r?em)|rounded-(full|xl|2xl|lg)' "$f" && hits+=(round)
+  { grep -qiE 'border-radius:\s*([5-9]|[1-9][0-9]+)px|border-radius:\s*[0-9.]+(r?em)' "$css" ||
+    grep -qiE 'class="[^"]*rounded-(full|xl|2xl|lg)' "$f"; } && hits+=(round)
   grep -qiE 'prefers-color-scheme|data-theme|color-scheme' "$f" || hits+=(no-theme)
   local c h s purple=0
-  for c in $(grep -oiE '#[0-9a-f]{6}\b' "$f" | tr 'A-F' 'a-f' | sort -u | head -200); do
+  for c in $(grep -oiE '#[0-9a-f]{6}\b' "$css" | tr '[:upper:]' '[:lower:]' | sort -u | head -200); do
     read -r h s < <(hue "$c")
     if (( h >= 255 && h <= 320 )) && awk -v s="$s" 'BEGIN{exit !(s>=0.35)}'; then purple=1; break; fi
   done
@@ -90,7 +93,9 @@ while IFS= read -r row; do
   [[ $code =~ ^[0-9]{3}$ ]] || code=000
   flags='[]'
   if ((lint)) && [[ $code == 200 ]]; then
-    # follow same-origin stylesheets so the lint sees the real CSS
+    # CSS only: inline <style> blocks and style="" attributes, then same-origin stylesheets
+    awk 'BEGIN{IGNORECASE=1} /<style/{s=1} s{print} /<\/style>/{s=0}' "$tmp/page.html" > "$tmp/style.css"
+    grep -oiE 'style="[^"]*"' "$tmp/page.html" >> "$tmp/style.css" || true
     base=$(sed -E 's#^(https?://[^/]+).*#\1#' <<<"$url")
     for css in $(grep -oiE '<link[^>]+rel="?stylesheet"?[^>]*>' "$tmp/page.html" | grep -oiE 'href="[^"]+"' | cut -d'"' -f2 | head -6); do
       case $css in
@@ -98,9 +103,10 @@ while IFS= read -r row; do
         /*) u="$base$css" ;;
         *) u="${url%/*}/$css" ;;
       esac
-      curl -s -L --max-time 15 "$u" >> "$tmp/page.html" || true
+      curl -s -L --max-time 15 "$u" >> "$tmp/style.css" || true
     done
-    flags=$(lint_html "$tmp/page.html")
+    cat "$tmp/style.css" >> "$tmp/page.html"
+    flags=$(lint_html "$tmp/page.html" "$tmp/style.css")
   fi
   dep='{}'
   if [[ -n $repo ]]; then

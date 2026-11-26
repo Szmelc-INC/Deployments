@@ -45,27 +45,6 @@
     },
     {
       "archived": false,
-      "description": "Szmelc WebUI doctrine: one core, small per-project flavors. Audit of every deployment, templates and automations.",
-      "has_pages": true,
-      "homepage": "https://szmelc-inc.github.io/Deployments/",
-      "name": "Deployments",
-      "owner": "Szmelc-INC",
-      "pushed": "2026-11-26",
-      "repo": "Szmelc-INC/Deployments",
-      "url": "https://szmelc-inc.github.io/Deployments/",
-      "http": 404,
-      "flags": [],
-      "deploy": {
-        "at": "",
-        "env": ""
-      },
-      "surface": "project",
-      "archetype": "catalog",
-      "flavor": "catalog · ❯ · .2 · cursor · accent",
-      "notes": "Dogfood: built from templates/starter.html. Must stay free of lint flags."
-    },
-    {
-      "archived": false,
       "description": "Kombinat v2 - Meta-SkyNET's for a modern dev.",
       "has_pages": true,
       "homepage": "",
@@ -262,6 +241,27 @@
       "archetype": "catalog",
       "flavor": "catalog · ❯ · .md · cursor · accent",
       "notes": "Reference implementation. Keep in sync with templates/szmelc.css token names."
+    },
+    {
+      "archived": false,
+      "description": "Szmelc WebUI doctrine: one core, small per-project flavors. Audit of every deployment, templates and automations.",
+      "has_pages": true,
+      "homepage": "https://szmelc-inc.github.io/Deployments/",
+      "name": "Deployments",
+      "owner": "Szmelc-INC",
+      "pushed": "2026-11-26",
+      "repo": "Szmelc-INC/Deployments",
+      "url": "https://szmelc-inc.github.io/Deployments/",
+      "http": 200,
+      "flags": [],
+      "deploy": {
+        "at": "2026-11-26",
+        "env": "github-pages"
+      },
+      "surface": "project",
+      "archetype": "catalog",
+      "flavor": "catalog · ❯ · .2 · cursor · accent",
+      "notes": "Dogfood: built from templates/starter.html. Must stay free of lint flags."
     },
     {
       "archived": false,
