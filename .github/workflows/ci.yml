@@ -1,0 +1,22 @@
+name: ci
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Shellcheck
+        run: shellcheck tools/*.sh
+      - name: Doctrine checks
+        run: tools/check.sh
+      - name: Build from the committed audit snapshot
+        run: tools/build.sh --offline
+      - name: Built page is self-contained
+        run: |
+          test -s public/index.html
+          ! grep -qiE '<script[^>]+src=|<link[^>]+stylesheet' public/index.html
